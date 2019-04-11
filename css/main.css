@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #fff;
+}
+.box{
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(74,13,143) 0%, rgba(250,42,143) 100%);
+}
+.logo{
+    margin: 15px;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.logo span{
+    font-weight: 700;
+    color:#f1f1f1f1;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+.menu ul{
+    display: flex;
+}
+.menu ul li{
+    list-style: none;
+    padding: 30px 10px;
+}
+.menu ul li a{
+    text-decoration: none;
+    padding: 10px; 
+    font-size: 1.1em;
+    transition: all .4s;
+}
+.menu ul li:nth-child(6) a{
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+.menu ul li:nth-child(6) a:hover{
+    background:rgba(0,0,0,0.2);
+}
+.menu ul li a:hover{
+    border-bottom: 1px solid #fff;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-weight: 900;
+    margin: 20px;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.content p{
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.2em;
+}
+img{
+    width: 300px;
+    height: 500px;
+    margin-top: 60px;
+    position : absolute;
+    left: calc(50% - 150px);
+}
+.icon-check img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin:26px 40px;
+    cursor: pointer;
+}
+.icon-check, #check{
+    display: none;
+}
+.icon-check img{
+    width: 35px;
+    height: 35px;
+}
+
+@media screen and (max-width:780px){
+    .icon-check{
+        display: block;
+    }
+    .logo{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .menu{
+        margin-top: 32px;
+        z-index: 10;
+    }
+    .menu ul{
+        background: rgba(0,0,0, 0.8);
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 350px;
+        margin-left: -400px;
+        transition: all .5s;
+        border-radius: 5px;
+    }
+  
+    .menu ul li a{
+        padding: 30px 150px;
+        width: 100%;
+        border-bottom: 1px solid rgba(250,42,143);
+    }
+    .menu ul li:nth-child(6) a{
+        border: 1px solid #fff;
+        padding: 5px 20px;
+        border-radius: 3px;
+        margin: 0px 120px;
+    }
+   #check:checked ~ .menu ul{
+      margin-left: 10px;
+
+   }
+}
+
+
